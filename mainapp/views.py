@@ -1,10 +1,8 @@
-from django.shortcuts import render, get_object_or_404, redirect
+from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse, Http404
 from django.conf import settings
 from mainapp.models import Track, TrackCategory
-from django.templatetags.static import static
 import os
-from django.urls import include, path
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 
