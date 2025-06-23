@@ -19,4 +19,8 @@ from django.urls import path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('<int:pk>/', views.download_count, name='download'),
+    path('category/<int:pk>/', views.blog, name='category'),
+    path('category/<int:pk>/page/<int:page>/', views.blog, name='page'),
+    path('', views.main, name='main'),
 ]
